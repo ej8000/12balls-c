@@ -164,7 +164,8 @@ void Grab(HWND hwnd, int x, int y) {
 
 void Drag(HWND hwnd, int x, int y) {
     if (bDrag) {
-        SetWindowPos(Ball[oldBall].CTL, HWND_TOP, x - cx, y - cy, 25, 25, SWP_SHOWWINDOW); 
+        SetWindowPos(Ball[oldBall].CTL, HWND_TOP, 0, 0, 0, 0, SWP_NOSIZE | SWP_NOMOVE); 
+        MoveWindow(Ball[oldBall].CTL, x - cx, y - cy, 25, 25, TRUE); 
     }
 }
 
