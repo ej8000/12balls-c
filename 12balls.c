@@ -205,6 +205,7 @@ void Drop(HWND hwnd, int x, int y) {
     if (!bSnag) {
         MoveWindow(Ball[oldBall].CTL, ol, ot, 25, 25, TRUE);
     }
+    InvalidateRect(hwnd, NULL, TRUE); // Force repaint
 }
 
 LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam) {
