@@ -52,7 +52,7 @@ void InitBalls(HWND hwnd) {
             SelectObject(hdcMem, hBall[q]);
             HFONT hFont = CreateFont(12, 0, 0, 0, FW_BOLD, 0, 0, 0, ANSI_CHARSET, 0, 0, 0, 0, "Verdana");
             HFONT hOldFont = SelectObject(hdcMem, hFont);
-            SetTextColor(hdcMem, RGB(255, 0, 0)); // Red text
+            SetTextColor(hdcMem, RGB(0, 0, 255)); // Blue text
             SetBkMode(hdcMem, TRANSPARENT);
             char num[10];
             wsprintf(num, "%d", q + 1);
